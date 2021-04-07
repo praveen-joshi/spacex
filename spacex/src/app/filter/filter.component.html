@@ -1,0 +1,25 @@
+
+<div>
+    <h3>Lauch Year</h3>
+    <ng-container *ngFor="let year of allYears">
+        <button [ngClass]="{'bg-primary':this.date!=year,'bg-danger':this.date==year}" 
+        class="btn m-2" (click)="chageDate(year)">{{year}}</button>
+    </ng-container>
+</div>
+<div>
+    <h3>Lauch</h3>
+    <button [ngClass]="{'bg-primary':this.launch!='true','bg-danger':this.launch=='true'}" 
+    class="btn m-2" (click)="chageLaunch('true')">True</button>
+
+    <button [ngClass]="{'bg-primary':this.launch!='false','bg-danger':this.launch=='false'}" 
+    class="btn m-2" (click)="chageLaunch('false')">False</button>
+
+</div>
+<div>
+    <h3>Land</h3>
+    <button [ngClass]="{'bg-primary':this.land!='true','bg-danger':this.land=='true'}" 
+    class="btn m-2" (click)="chageLand('true')">True</button>
+
+    <button [ngClass]="{'bg-primary':this.land!='false','bg-danger':this.land=='false'}" 
+    class="btn m-2" (click)="chageLand('false')">False</button>
+</div>

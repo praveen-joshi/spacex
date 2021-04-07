@@ -1,0 +1,18 @@
+<div class="row">
+<ng-container *ngFor="let rocket of rockets$ |async;">
+    <div class="bg-light shadow-lg m-2 p-1 text-center" style="width:300px;">
+        <img *ngIf="rocket.links.mission_patch" src={{rocket.links.mission_patch}} 
+        style="height: 200px; width: 200px;" class="mb-3">
+        <div class="d-flex flex-column">
+            <span>Lauch Success: {{rocket.launch_success}}</span>
+            <span *ngIf="rocket.launch_year">Launch year: {{rocket.launch_year}}</span>
+            <!-- <span *ngIf="rocket.rocket.first_stage.cores.land_success">
+                Land Success: {{rocket.rocket.first_stage.cores.land_success}}</span> -->
+            <span *ngIf="rocket.mission_name">Mission name: {{rocket.mission_name}}</span>
+        </div>
+    </div>
+
+</ng-container>
+
+
+</div>
